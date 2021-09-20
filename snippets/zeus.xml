@@ -30,11 +30,15 @@
   <remote name="pixel"
           fetch="https://github.com/PixelExperience"
           revision="eleven" />
+          
+   <remote name="B07123"
+          fetch="https://github.com/B07123"
+          revision="11.1" />        
 
   <!-- General Repos -->
-  <project path="art" name="android_art" remote="Zeus-OS" />
-  <project path="bionic" name="android_bionic" remote="Zeus-OS" />
-  <project path="build/make" name="android_build" remote="Zeus-OS" >
+  <project path="art" name="android_art" remote="B07123" />
+  <project path="bionic" name="android_bionic" remote="B07123" />
+  <project path="build/make" name="android_build" remote="B07123" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
@@ -44,7 +48,7 @@
     <linkfile src="tools" dest="build/tools" />
   </project>
 
-  <project path="build/soong" name="android_build_soong" remote="Zeus-OS" >
+  <project path="build/soong" name="android_build_soong" remote="B07123" >
     <linkfile src="root.bp" dest="Android.bp" />
     <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
   </project>
@@ -52,9 +56,9 @@
   <project path="lineage-sdk" name="android_lineage-sdk" remote="Zeus-OS" />
 
   <!-- Frameworks -->
-  <project path="frameworks/av" name="android_frameworks_av" remote="Zeus-OS" />
-  <project path="frameworks/base" name="android_frameworks_base" remote="Zeus-OS" />
-  <project path="frameworks/native" name="android_frameworks_native" remote="Zeus-OS" />
+  <project path="frameworks/av" name="android_frameworks_av" remote="B07123" />
+  <project path="frameworks/base" name="android_frameworks_base" remote="B07123" />
+  <project path="frameworks/native" name="android_frameworks_native" remote="B07123" />
   <project path="frameworks/opt/telephony" name="android_frameworks_opt_telephony" remote="Zeus-OS" />
   <project path="frameworks/opt/net/ims" name="android_frameworks_opt_net_ims" remote="Zeus-OS" groups="frameworks_ims,pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/net/wifi" name="android_frameworks_opt_net_wifi" remote="Zeus-OS" groups="pdk" />
@@ -70,17 +74,17 @@
   <project path="external/asus/stitchimage" name="android_external_asus_stitchimage" remote="Zeus-OS" />
 
   <!-- Packages -->
-  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="Zeus-OS" />
+  <project path="packages/apps/Bluetooth" name="android_packages_apps_Bluetooth" remote="B07123" />
   <project path="packages/apps/CustomDoze" name="android_packages_apps_CustomDoze" remote="Zeus-OS" />
-  <project path="packages/apps/Olymp" name="android_packages_apps_Olymp" remote="Zeus-OS" />
+  <project path="packages/apps/Olymp" name="android_packages_apps_Olymp" remote="B07123" />
   <project path="packages/apps/LineageParts" name="android_packages_apps_LineageParts" remote="Zeus-OS" />
   <project path="packages/apps/Launcher3" name="android_packages_apps_Launcher3" remote="Zeus-OS" />
-  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="Zeus-OS" />
+  <project path="packages/apps/Settings" name="android_packages_apps_Settings" remote="B07123" />
   <project path="packages/apps/ThemePicker" name="android_packages_apps_ThemePicker" remote="Zeus-OS" />
   <project path="packages/services/Telecomm" name="android_packages_services_Telecomm" remote="Zeus-OS" />
   <project path="packages/services/Telephony" name="android_packages_services_Telephony" remote="Zeus-OS" />
   <project path="packages/services/OmniJaws" name="android_packages_services_OmniJaws" remote="Zeus-OS" />
-  <project path="packages/apps/Plugins" name="android_packages_apps_Plugins" remote="Zeus-OS"/>
+  <project path="packages/apps/Plugins" name="platform_packages_apps_Plugins" remote="B07123"/>
   <project path="packages/apps/OmniStyle" name="android_packages_apps_OmniStyle" remote="Zeus-OS" />
   <project path="packages/apps/WallpaperPicker2" name="android_packages_apps_WallpaperPicker2" remote="Zeus-OS" />
   <project path="packages/apps/Matlog" name="android_packages_apps_Matlog" remote="Zeus-OS" />
@@ -90,26 +94,26 @@
   <project path="packages/apps/SettingsIntelligence" name="android_packages_apps_SettingsIntelligence" remote="Zeus-OS" />
   <project path="packages/apps/PermissionController" name="android_packages_apps_PackageInstaller" remote="Zeus-OS" />
   <project path="packages/apps/FaceUnlockService" name="android_packages_apps_FaceUnlockService" remote="Zeus-OS" />
-  <project path="packages/apps/Dialer" name="android_packages_apps_Dialer" remote="Zeus-OS" />
+  <project path="packages/apps/Dialer" name="platform_packages_apps_Dialer" remote="B07123" />
 
   <!-- System -->
-  <project path="system/core" name="android_system_core" remote="Zeus-OS" />
+  <project path="system/core" name="android_system_core" remote="B07123" />
   <project path="system/hardware/interfaces" name="android_system_hardware_interfaces" remote="Zeus-OS" />
-  <project path="system/security" name="android_system_security" remote="Zeus-OS" />
-  <project path="system/iorap" name="android_system_iorap" remote="Zeus-OS" />
-  <project path="system/vold" name="android_system_vold" remote="Zeus-OS" />
-  <project path="system/update_engine" name="android_system_update_engine" remote="Zeus-OS" />
-  <project path="system/netd" name="android_system_netd" remote="Zeus-OS" />
-  <project path="system/bt" name="android_system_bt" groups="qcom,pdk-qcom" remote="Zeus-OS" />
+  <project path="system/security" name="android_system_security" remote="B07123" />
+  <project path="system/iorap" name="android_system_iorap" remote="B07123" />
+  <project path="system/vold" name="android_system_vold" remote="B07123" />
+  <project path="system/update_engine" name="android_system_update_engine" remote="B07123" />
+  <project path="system/netd" name="android_system_netd" remote="B07123" />
+  <project path="system/bt" name="android_system_bt" groups="qcom,pdk-qcom" remote="B07123" />
 
   <!-- Sepolicy -->
   <project path="device/lineage/sepolicy" name="android_device_zeus_sepolicy" remote="Zeus-OS" />
-  <project path="system/sepolicy" name="android_system_sepolicy" remote="Zeus-OS" />
+  <project path="system/sepolicy" name="android_system_sepolicy" remote="B07123" />
 
   <!-- Vendor -->
   <project path="vendor/qcom/opensource/interfaces" name="android_vendor_qcom_opensource_interfaces" remote="Zeus-OS" />
-  <project path="vendor/addons" name="android_vendor_addons" remote="Zeus-OS" />
-  <project path="vendor/lineage" name="android_vendor_zeus" remote="Zeus-OS" />
+  <project path="vendor/addons" name="android_vendor_addons" remote="B07123" />
+  <project path="vendor/lineage" name="vendor_zeus" remote="B07123" />
   <project path="vendor/support" name="android_vendor_support" remote="Zeus-OS" /> 
   <project path="vendor/zeusOTA" name="android_vendor_zeusOTA" remote="Zeus-OS" />
   <project path="vendor/opstuff" name="vendor_opstuff" remote="Zeus-OS" />
@@ -122,7 +126,7 @@
 
   <!-- NFC Stack -->
   <project path="hardware/nxp/nfc" name="android_hardware_nxp_nfc" remote="Zeus-OS" />
-  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="Zeus-OS" />
+  <project path="packages/apps/Nfc" name="android_packages_apps_Nfc" remote="B07123" />
 
  <project path="hardware/xiaomi" name="android_hardware_xiaomi" remote="Zeus-OS" />
 
