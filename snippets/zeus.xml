@@ -38,7 +38,7 @@
   <!-- General Repos -->
   <project path="art" name="android_art" remote="B07123" />
   <project path="bionic" name="android_bionic" remote="B07123" />
-  <project path="build/make" name="android_build" remote="B07123" >
+  <project path="build/make" name="android_build_make" remote="B07123" >
     <copyfile src="core/root.mk" dest="Makefile" />
     <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
     <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
